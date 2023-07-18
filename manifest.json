@@ -1,0 +1,30 @@
+{
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.console.aws.amazon.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/favicon.ico"],
+      "matches": ["https://*.console.aws.amazon.com/*"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "192": "icons/icon192.png"
+  }
+}
